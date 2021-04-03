@@ -1,0 +1,126 @@
+/*-------------------------------
+
+    Custom stylesheet (custom.css)
+
+    Project: origintype website
+    Version: 1.0
+    Author: By Dwi Priyatmoko
+    Last change: 1 April 2020
+
+----------------------------*/
+
+a {
+	color: #000;
+	transition: color .3s;
+}
+
+a:hover,
+a:focus {
+	color: #ffa726;
+}
+
+h4 {
+	color: #ffa726;
+}
+
+
+/***************
+Home
+***************/
+.height {
+	min-height: 350px;
+	position: relative;
+}
+
+.heading {
+	width: 100%;
+	margin: 20px 0 0 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.heading {
+	transform: translate(-50%, calc(-50% + 1em));
+}
+
+.is-visible .heading {
+	transform: translate(-50%, -50%);
+}
+
+.heading {
+	transition: transform 4s .25s cubic-bezier(0, 1, .3, 1);
+	will-change: transform;
+}
+
+.header {
+	opacity: 0;
+	transition: opacity .5s .25s ease-in-out;
+}
+
+.header.is-visible {
+	opacity: 1;
+}
+
+.grid.masonry .item .caption {
+	top: 5%;
+}
+
+.grid.masonry .item .thumb {
+	background-color: #181818;
+	transition: opacity 0.5s ease;
+}
+
+.grid.masonry .item .thumb a {
+	transition: .3s;
+}
+
+
+.filter-container ul.filters li a.filter {
+	font-size: 30px;
+}
+
+@media screen and (min-width: 992px) {
+	.grid.masonry .item:hover .thumb img {
+		opacity: .1;
+		transition: all .2s .1s;
+	}
+}
+
+/***************
+Keyboard works
+***************/
+.grid.classic .item .thumb {
+	max-height: 341px;
+}
+
+/***************
+Footer 
+***************/
+footer a {
+	text-decoration: underline;
+}
+
+
+/***************
+About
+***************/
+.the-items p,
+.the-items h4 {
+	padding: 0 10px;
+}
+
+/***************
+Single Page 
+***************/
+ul.list-mod p {
+	margin-bottom: 8px;
+}
+
+.social-links p {
+	margin-bottom: 0;
+}
+
+.content img {
+	width: 100%;
+}
