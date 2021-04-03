@@ -101,6 +101,21 @@ footer a {
 	text-decoration: underline;
 }
 
+ul.social-links p {
+	margin-bottom: 8px;
+}
+
+ul.social-links li a svg {
+	width: 18px;
+	height: 18px;
+	fill: #555;
+	transition: .3s;
+}
+
+ul.social-links li a svg:hover {
+	fill: var(--primary-color);
+}
+
 
 /***************
 About
@@ -117,10 +132,25 @@ ul.list-mod p {
 	margin-bottom: 8px;
 }
 
-.social-links p {
-	margin-bottom: 0;
-}
-
 .content img {
 	width: 100%;
 }
+
+
+/***************
+contact Page 
+***************/
+.contact-img {
+	padding: 0 30px;
+	text-align: center;
+}
+.contact-img img {
+	width: auto;
+	max-height: 60px;
+	filter: grayscale(100%);
+	transition: .3s;
+}
+.contact-img:hover img {
+	filter: grayscale(0%);
+}
+
