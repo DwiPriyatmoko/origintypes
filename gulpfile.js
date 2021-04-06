@@ -167,7 +167,7 @@ gulp.task('tinypngOptimization', tinypngOptimization);
 
 function tinypngOptimization() {
 	return gulp
-		.src(['src/images/**/*.*'])
+		.src(['src/images/**/*.{png,jpg,jpeg}'])
 		.pipe(plumber())
 		.pipe(tinypngfree())
 		.pipe(gulp.dest('build/images'));
