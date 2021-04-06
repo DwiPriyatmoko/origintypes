@@ -28,7 +28,6 @@
         "gulp-sourcemaps": "^2.6.5",
         "gulp-tinypng-free": "^1.0.13",
         "gulp-uglify": "^3.0.2",
-		"gulp-zip": "^5.0.2",
         "postcss": "^8.0.7"
     },
     "dependencies": {}

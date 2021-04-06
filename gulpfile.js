@@ -21,8 +21,7 @@ const postcss = require('gulp-postcss'),
 	autoprefixer = require('autoprefixer');
 
 //FILE MANAGEMENT
-const CompressZip = require('gulp-zip'),
-	clean = require('gulp-clean'),
+const clean = require('gulp-clean'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
 	// gulpCopy = require('gulp-copy'),
@@ -211,15 +210,6 @@ function run() {
 }
 
 
-// Compress to ZIP
-gulp.task('zip', zip);
-
-function zip() {
-	gulp.src('build/**')
-		.pipe(CompressZip('build.zip'))
-		.pipe(gulp.dest('build'));
-}
-
 // define complex tasks
 const build = gulp.series(htmlReplace, cssBundle, jsOptimize, jqueryOptimize, jsBundle, copyExtraAsset1, tinypngOptimization, criticalCSS);
 
@@ -231,18 +221,10 @@ exports.build = build;
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // Clean build directory
-function clear() {
-	return gulp.src('build/**/*', {
-		read: false
-	}).pipe(clean());
-}
+// function clear() {
+// 	return gulp.src('build/**/*', {
+// 		read: false
+// 	}).pipe(clean());
+// }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
-
-// FINAL BUILD AND ZIP FILE
-// gulp.task('zipBuild', ['build'], function() {
-//     gulp.src('build/**')
-//         .pipe(zip('archive.zip'))
-//         .pipe(gulp.dest('build'));
-// });
 ///////////////////////////////////////////////////////////////////////////////////////////////
